@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AiringController;
@@ -38,4 +39,5 @@ Route::group([
     Route::post('/logout', [AuthController::class,'logout']);
     Route::post('/refresh', [AuthController::class,'refresh']);
     Route::get('/me', [AuthController::class,'me']);
+    Route::POST('/file', [UserController::class,'uploadFile']);
 });
