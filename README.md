@@ -1,5 +1,7 @@
 # Documentation
 
+Base Url http://127.0.0.1:8000/api
+
 ## Requirement
 - Composer
 
@@ -73,6 +75,7 @@ Example response (200)
 
 #### Request Headers
 - **Authorization:** Bearer Token
+- **Content-Type:** application/json
 
 #### Response
 Example response (200)
@@ -90,6 +93,7 @@ Example response (200)
 
 #### Request Headers
 - **Authorization:** Bearer Token
+- **Content-Type:** application/json
 
 #### Response
 Example response (200)
@@ -107,6 +111,7 @@ Example response (200)
 
 #### Request Headers
 - **Authorization:** Bearer Token
+- **Content-Type:** application/json
 
 #### Response
 Example response (200)
@@ -124,6 +129,7 @@ Example response (200)
 
 #### Request Headers
 - **Authorization:** Bearer Token
+- **Content-Type:** application/json
 
 #### Response
 Example response (200)
@@ -170,6 +176,7 @@ Example response (200)
 
 #### Request Headers
 - **Authorization:** Bearer Token
+- **Content-Type:** application/json
 
 #### Path Parameter
 - **id:** Number
@@ -190,5 +197,27 @@ Example response (200)
         "updated_at": "2023-11-11T04:25:12.000000Z"
     },
     "message": "succeed"
+}
+```
+
+### POST /file
+
+#### Request Headers
+- **Authorization:** Bearer Token
+- **Content-Type:** multipart/form-data
+
+#### Request
+Example Request
+
+"name": "testing",
+"file": FILE (jpg, png)
+
+#### Response
+Example response (201)
+
+```json
+{
+    "message": "File uploaded successfully",
+    "filename": "username_1699680325_testing"
 }
 ```

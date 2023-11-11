@@ -32,6 +32,6 @@ class UserController extends Controller
         return response()->json([
             'message' => 'File uploaded successfully',
             'filename' => $filename,
-        ]);
+        ], 201);
     }
 }
