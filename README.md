@@ -182,6 +182,7 @@ Example response (201)
 ```json
 {
     "message": "File uploaded successfully",
-    "filename": "username_1699680325_testing"
+    "filename": "usernames_1699682220_testing.png",
+    "file_url": "http://127.0.0.1:8000/uploads/usernames_1699682220_testing.png"
 }
 ```

@@ -26,12 +26,13 @@ class UserController extends Controller
         $user = User::find(auth()->user()->getAuthIdentifier());
 
         $file = $request->file('file');
-        $filename = $user->username . '_' . time() . '_' . $request->get('name');
+        $filename = $user->username . '_' . time() . '_' . $request->get('name') . '.' . $file->getClientOriginalExtension();
         $file->move(public_path('uploads'), $filename);
         
         return response()->json([
             'message' => 'File uploaded successfully',
             'filename' => $filename,
+            'file_url' => asset('uploads/' . $filename),
         ], 201);
     }
 }
