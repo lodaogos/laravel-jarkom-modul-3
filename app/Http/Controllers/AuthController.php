@@ -17,15 +17,6 @@ use Symfony\Component\HttpFoundation\Response;
 
 class AuthController extends Controller
 {
-    /**
-     * Create a new AuthController instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth:api', ['except' => ['login']]);
-    }
 
     /**
      * Get a JWT via given credentials.
@@ -34,6 +25,7 @@ class AuthController extends Controller
      */
     public function login(Request $request)
     {
+        Log::info("Request for Login method is being handled by worker: " . gethostname());
         $validator = validator::make($request->all(), [
             'username' => 'required|string',
             'password' => 'required|string|min:6',
@@ -56,8 +48,14 @@ class AuthController extends Controller
         return response()->json(compact('token'));
     }
 
+    /**
+     * Register new User.
+     *
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function register(Request $request): JsonResponse
     {
+        Log::info("Request for Register method is being handled by worker: " . gethostname());
         $validator = validator::make($request->all(), [
             'username' => [
                 'required', 'string', 'max:255',
@@ -87,6 +85,7 @@ class AuthController extends Controller
      */
     public function me()
     {
+        Log::info("Request for Me method is being handled by worker: " . gethostname());
         return response()->json(auth()->user());
     }
 
@@ -97,6 +96,7 @@ class AuthController extends Controller
      */
     public function logout()
     {
+        Log::info("Request for Logout method is being handled by worker: " . gethostname());
         auth()->logout();
 
         return response()->json(['message' => 'Successfully logged out']);
