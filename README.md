@@ -71,42 +71,6 @@ Example response (200)
 }
 ```
 
-### GET me
-
-#### Request Headers
-- **Authorization:** Bearer Token
-- **Content-Type:** application/json
-
-#### Response
-Example response (200)
-
-```json
-{
-    "id": 1,
-    "username": "username",
-    "created_at": "2023-11-11T03:50:07.000000Z",
-    "updated_at": "2023-11-11T03:50:07.000000Z"
-}
-```
-
-### GET me
-
-#### Request Headers
-- **Authorization:** Bearer Token
-- **Content-Type:** application/json
-
-#### Response
-Example response (200)
-
-```json
-{
-    "id": 1,
-    "username": "username",
-    "created_at": "2023-11-11T03:50:07.000000Z",
-    "updated_at": "2023-11-11T03:50:07.000000Z"
-}
-```
-
 ### GET /me
 
 #### Request Headers
