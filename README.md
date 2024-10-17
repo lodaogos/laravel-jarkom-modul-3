@@ -19,7 +19,10 @@ composer install
 ```sh
 php artisan migrate:fresh
 php artisan db:seed --class=AiringsTableSeeder
+
+--might be needed--
 php artisan key:generate
+php artisan jwt:secret
 ```
 
 ## Endpoint
