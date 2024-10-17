@@ -4,7 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AiringController;
+use App\Http\Controllers\MusicController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,12 +18,12 @@ use App\Http\Controllers\AiringController;
 */
 
 Route::group([
-    'prefix' => 'airing',
+    'prefix' => 'music',
     'middleware' => 'jwt.verify'
 ], function () {
-    Route::get('/', [AiringController::class, 'index']);
-    Route::get('/{id}', [AiringController::class, 'show']);
-    Route::post('/', [AiringController::class, 'store']);
+    Route::get('/', [MusicController::class, 'index']);
+    Route::get('/{id}', [MusicController::class, 'show']);
+    Route::post('/', [MusicController::class, 'store']);
 });
 
 Route::group([
