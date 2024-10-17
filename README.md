@@ -18,7 +18,7 @@ composer install
 
 ```sh
 php artisan migrate:fresh
-php artisan db:seed --class=AiringsTableSeeder
+php artisan db:seed --class=MusicsTableSeeder
 
 --might be needed--
 php artisan key:generate
@@ -93,7 +93,7 @@ Example response (200)
 }
 ```
 
-### GET /airing/
+### GET /music/
 
 #### Request Headers
 - **Authorization:** Bearer Token
@@ -154,7 +154,7 @@ Example response (200)
 }
 ```
 
-### GET /airing/:id
+### GET /music/:id
 
 #### Request Headers
 - **Authorization:** Bearer Token
