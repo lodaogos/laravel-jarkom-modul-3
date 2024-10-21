@@ -11,8 +11,8 @@ Base Url http://127.0.0.1:8000/api
 - Configure database in .env
 
 ```sh
-git clone https://github.com/martuafernando/laravel-praktikum-jarkom.git
-cd laravel-praktikum-jarkom
+git clone https://github.com/lodaogos/laravel-jarkom-modul-3.git
+cd laravel-jarkom-modul-3
 composer install
 ```
 
